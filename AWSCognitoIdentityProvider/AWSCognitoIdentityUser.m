@@ -204,8 +204,8 @@ static const NSString * AWSCognitoIdentityUserUserAttributePrefix = @"userAttrib
                 if(task.error){
                     //If this token is no longer valid, fall back on interactive auth.
                     if(task.error.code == AWSCognitoIdentityProviderErrorNotAuthorized) {
-                        return [self interactiveAuth];
-                    } else {
+                    //     return [self interactiveAuth];
+                    // } else {
                         return task;
                     }
                 }
